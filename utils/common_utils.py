@@ -63,9 +63,9 @@ def plot_image_grid(images_np, nrow =8, factor=1, interpolation='lanczos'):
     """Draws images in a grid
     
     Args:
-        images_np: list of images, each image is np.array of size 3xHxW of 1xHxW
+        images_np: list of images, each image is np.array of size 3xHxW or 1xHxW
         nrow: how many images will be in one row
-        factor: size if the plt.figure 
+        factor: size of the plt.figure 
         interpolation: interpolation used in plt.imshow
     """
     n_channels = max(x.shape[0] for x in images_np)
@@ -92,7 +92,7 @@ def load(path):
     return img
 
 def get_image(path, imsize=-1):
-    """Load an image and resize to a cpecific size. 
+    """Load an image and resize to a specific size. 
 
     Args: 
         path: path to image
